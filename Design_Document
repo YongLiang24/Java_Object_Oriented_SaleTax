@@ -1,0 +1,33 @@
+A brief description of my design and approach.
+
+- Read the text file
+	- Used Scanner object to read the file
+	- Utilized split() method to turn the line of text into an array
+	
+	- The first index is the quantity, last index is the price
+	- Utilized join() and Arrays.copyOfRange() methods to get the item names
+
+
+- Item Categories 
+		- Basic Items
+		- Imported Items
+		
+- Tax Rates
+		- 0% on Exempted Basic Items
+		- 10% on all other Basic Items
+		
+		- 5% on Exempted Import Items
+		- 15% on all other Imported Items
+		
+- Classes
+		- Item Class - Abstract Parent Class
+		- BasicItem Class - Extends Item Class
+		- ImportItem Class - Extends Item Class
+		
+		- ReceiptPrint Class - Individual class	
+		- FileReader Class - Reads files and generate a list of updated items
+		- Main Class - Main class for printing each text files to console
+		
+- Interface
+		- TaxCalculator Interface - defines tax rates and tax methods
+		- The parent Item class implements this interface
